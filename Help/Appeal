@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super's Studio</title>
+    <style>
+        body {
+            background-image: url('https://media.discordapp.net/attachments/1093259520492445697/1104778107568791652/Skull_1.png?width=427&height=427');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #main {
+            width: 400px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Super's Studio</h1>
+        <form id="myForm">
+            <input type="text" name="input1" placeholder="Input 1">
+            <input type="text" name="input2" placeholder="Input 2">
+            <input type="text" name="input3" placeholder="Input 3">
+            <input type="text" name="input4" placeholder="Input 4">
+            <input type="text" name="input5" placeholder="Input 5">
+            <input type="text" name="input6" placeholder="Input 6">
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            // Convert form data to JSON
+            var jsonData = {};
+            for (var pair of formData.entries()) {
+                jsonData[pair[0]] = pair[1];
+            }
+
+            // Send JSON data to Discord webhook
+            var webhookURL = "YOUR_DISCORD_WEBHOOK_URL"; // Replace with your webhook URL
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", webhookURL, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(jsonData));
+
+            // Clear form inputs after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
