@@ -77,9 +77,17 @@
         <a href="#help-appeal" class="btn-appeal">Help / Appeal</a>
     </div>
 
-    <div id="help-appeal">
-        <h2>Help / Appeal Section</h2>
-        <!-- Add your help/appeal content here -->
-    </div>
+    <div id="help-appeal"></div>
+
+    <script>
+        window.onload = function() {
+            var helpAppealDiv = document.getElementById("help-appeal");
+            var helpAppealAnchor = document.querySelector('a[href="#help-appeal"]');
+
+            helpAppealAnchor.addEventListener("click", function() {
+                helpAppealDiv.scrollIntoView({ behavior: 'smooth' });
+            });
+        };
+    </script>
 </body>
 </html>
