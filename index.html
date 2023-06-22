@@ -65,6 +65,14 @@
         .btn-appeal:hover {
             background-color: #777;
         }
+
+        #help-appeal {
+            display: none;
+        }
+
+        #help-appeal.show {
+            display: block;
+        }
     </style>
 </head>
 
@@ -77,17 +85,23 @@
         <a href="#help-appeal" class="btn-appeal">Help / Appeal</a>
     </div>
 
-    <div id="help-appeal"></div>
+    <div id="help-appeal">
+        <h2>Help / Appeal Section</h2>
+        <!-- Add your help/appeal content here -->
+    </div>
 
     <script>
-        window.onload = function() {
+        window.addEventListener("scroll", function() {
             var helpAppealDiv = document.getElementById("help-appeal");
             var helpAppealAnchor = document.querySelector('a[href="#help-appeal"]');
 
-            helpAppealAnchor.addEventListener("click", function() {
-                helpAppealDiv.scrollIntoView({ behavior: 'smooth' });
-            });
-        };
+            var rect = helpAppealDiv.getBoundingClientRect();
+            var isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+
+            if (isVisible) {
+                helpAppealDiv.classList.add("show");
+            }
+        });
     </script>
 </body>
 </html>
