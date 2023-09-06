@@ -6,7 +6,9 @@
     <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1093259520492445697/1104778107568791652/Skull_1.png?width=427&height=427">
     <title>Super's Studio</title>
     <style>
+        /* Global Styles */
         body {
+            font-family: Arial, sans-serif;
             background-image: url('https://media.discordapp.net/attachments/1093259520492445697/1104778107568791652/Skull_1.png?width=427&height=427');
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -14,29 +16,37 @@
             background-size: cover;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
         }
 
+        /* Main Container Styles */
+        #main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Content Styles */
         #main {
             max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.7);
             padding: 30px;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             font-size: 36px;
-            color: #333;
+            color: #fff;
             letter-spacing: 2px;
             margin-top: 0;
         }
 
         p {
             font-size: 18px;
-            color: #555;
+            color: #ccc;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -60,12 +70,16 @@
     </style>
 </head>
 <body>
-    <div id="main">
-        <h1>Super's Studio</h1>
-        <p>Welcome to Super's Studio! We are a group of gamers from all over the world who are passionate about the game Roblox. We are dedicated to helping new members join the group as well as offering fun events and contests. So if you're looking to join us, please don't hesitate to click the links below. We look forward to meeting you!</p>
-        <a href="https://www.roblox.com/groups/12756297/SS-Supers-Studio#!/about" target="_blank">Join the Group</a>
-        <a href="https://discord.gg/NH5HqBrFAy" target="_blank">Join the Discord</a>
-        <a href="info.html">About Us</a>
+    <div id="main-container">
+        <div id="main">
+            <h1>Super's Studio</h1>
+            <p>Welcome to Super's Studio! We are a group of gamers from all over the world who are passionate about the game Roblox. We are dedicated to helping new members join the group as well as offering fun events and contests. So if you're looking to join us, please don't hesitate to click the links below. We look forward to meeting you!</p>
+            <a href="https://www.roblox.com/groups/12756297/SS-Supers-Studio#!/about" target="_blank">Join the Group</a>
+            <a href="https://discord.gg/NH5HqBrFAy" target="_blank">Join the Discord</a>
+            <a href="info.html">About Us</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1041437223654010970&scope=applications.commands%20bot&permissions=8">Bot Invite Link</a>
+        </div>
     </div>
 </body>
 </html>
+
