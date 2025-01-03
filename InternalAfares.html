@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ssglg2.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap">
+    <title>Hiring - Internal Affairs Team</title>
+    <style>
+        body {
+            background: url('ssglg2.jpg') center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #main {
+            width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        legend {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Hiring - Internal Affairs Team</h1>
+        <p>Thank you for your interest in joining our Internal Affairs Team. Please fill out the following application form with the required information:</p>
+
+        <form id="hiring-form">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="position-applied">Position Applied For:</label>
+            <input type="text" id="position-applied" name="position-applied" required><br>
+
+            <label for="experience">Relevant Experience (if any):</label>
+            <textarea id="experience" name="experience" rows="4"></textarea><br>
+
+            <label for="skills">Skills and Qualifications:</label>
+            <textarea id="skills" name="skills" rows="4" required></textarea><br>
+
+            <label for="motivation">Why do you want to join the Internal Affairs Team?</label>
+            <textarea id="motivation" name="motivation" rows="4" required></textarea><br>
+
+            <label for="references">References (if any):</label>
+            <input type="text" id="references" name="references"><br>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+    <script src="application.js"></script>
+    <script src="application2.js"></script>
+</body>
+</html>

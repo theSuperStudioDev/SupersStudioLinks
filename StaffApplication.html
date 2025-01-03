@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ssglg2.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Super's Studio - Staff Application</title>
+    <style>
+        body {
+            background-image: url('ssglg2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #main {
+            width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Super's Studio - Staff Application</h1>
+        <p>Thank you for your interest in joining our team at Super's Studio! Please fill out the following application form with the required information:</p>
+        <form id="hiring-form">
+            <label for="discord-username">Discord Username:</label>
+            <input type="text" id="discord-username" name="discord-username" required><br>
+  
+            <label for="time-region">What is your time region?</label>
+            <input type="text" id="time-region" name="time-region" required><br>
+  
+            <label for="age">What is your age?</label>
+            <select id="age" name="age" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="13+">13+</option>
+                <option value="18+">18+</option>
+                <option value="21+">21+</option>
+            </select><br>
+  
+            <label for="reason-to-join">Why do you want to be a Staff member?</label>
+            <textarea id="reason-to-join" name="reason-to-join" rows="4" required></textarea><br>
+  
+            <label for="potential-candidate">Why do you think you're a potential candidate?</label>
+            <textarea id="potential-candidate" name="potential-candidate" rows="4" required></textarea><br>
+  
+            <label for="staff-duties">What will you do as staff?</label>
+            <textarea id="staff-duties" name="staff-duties" rows="4" required></textarea><br>
+  
+            <label for="experience">Do you have experience being Staff?</label>
+            <select id="experience" name="experience" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+  
+            <label for="dedication">What is dedication?</label>
+            <input type="text" id="dedication" name="dedication" required><br>
+            
+            <label for="follow-rules">Do you understand to follow all rules and guidelines as staff, also be responsible and respectful?</label>
+            <select id="follow-rules" name="follow-rules" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+  
+            <label for="activity-level">How active will you be as staff? (Use a 1-10 scale at the end)</label>
+            <input type="number" id="activity-level" name="activity-level" min="1" max="10" required><br>
+  
+            <label for="no-contact">Do you understand you cannot message anyone about the application?</label>
+            <select id="no-contact" name="no-contact" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+  
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="additional-comments">Anything you want to tell us, answer below:</label>
+                <textarea id="additional-comments" name="additional-comments" rows="4"></textarea><br>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="application.js"></script>
+    <script src="application2.js"></script>
+</body>
+</html>
