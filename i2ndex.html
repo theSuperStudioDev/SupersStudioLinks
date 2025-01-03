@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ssglg2.jpg">
+    <title>Super's Studio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('ssglg2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* Main Container Styles */
+        #main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            opacity: 0; /* Set initial opacity to 0 */
+            transform: scale(0.5) rotate(45deg); /* Set initial scale and rotation */
+            animation: coolAnimation 2s forwards; /* Use a cool animation */
+        }
+
+        @keyframes coolAnimation {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotate(45deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        /* Main Content Styles */
+        #main {
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-top: 0;
+            animation: pulsate 2s infinite; /* Pulsating effect */
+        }
+
+        @keyframes pulsate {
+            0%, 100% {
+                color: rgb(255, 204, 0); /* Initial and final color (RGB) */
+                transform: scale(1);
+            }
+            50% {
+                color: rgb(102, 255, 102); /* Color change during animation (RGB) */
+                transform: scale(1.2);
+            }
+        }
+
+        .links-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .link-item {
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            width: 200px; /* Adjust width as needed */
+            height: 200px; /* Adjust height as needed */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover {
+            transform: scale(1.1);
+        }
+
+        .link-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .link-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .link-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .link-item .overlay-content {
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .link-item a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+        }
+
+        .link-item:hover a {
+            z-index: 2;
+        }
+
+        .text-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .text-link:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 117)) {
+                e.preventDefault();
+            }
+        });
+
+        
+    </script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="main">
+            <h1>Super's Studio</h1>
+            <p>Welcome to Super's Studio! We are a group of gamers from all over the world who are passionate about the game Roblox. We are dedicated to helping new members join the group as well as offering fun events and contests. So if you're looking to join us, please don't hesitate to click the links below. We look forward to meeting you!</p>
+            <div class="links-container">
+                <div class="link-item">
+                    <img src="ssglg2.jpg" alt="Super's Studio">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="https://www.roblox.com/groups/12756297/SS-Supers-Studio#!/about" target="_blank">Join the Group</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link-item">
+                    <img src="SS logo icon.png" alt="Super's Studio Discord">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <a href="https://discord.gg/NH5HqBrFAy" target="_blank">Join the Discord</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="links-container">
+                <a href="info.html" class="text-link">About Us</a>
+                <a href="ApplicationHub.html" class="text-link">Application Hub</a>
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1063998131215290388&permissions=8&scope=bot" class="text-link">Bot Invite Link</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
